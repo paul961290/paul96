@@ -1,0 +1,22 @@
+{
+  "name": "paulss-cleaning-crews",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "mongoose": "^8.17.1",
+    "nodemailer": "^7.0.5",
+    "uuid": "^11.1.0"
+  }
+}
