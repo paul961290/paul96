@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Paul's Cleaning Crews</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body id="login-page"> <!-- ADDED THIS ID -->
+    <header>
+        <h1>Admin Login</h1>
+    </header>
+
+    <div class="container">
+        <section id="adminLoginSection">
+            <h2>Admin Login</h2>
+            <form id="adminLoginForm">
+                <label for="adminUsername">User ID:</label>
+                <input type="text" id="adminUsername" name="username" required>
+
+                <label for="adminPassword">Password:</label>
+                <input type="password" id="adminPassword" name="password" required>
+
+                <button type="submit">Login</button>
+                <div id="loginMessageStatus" class="message hidden"></div>
+            </form>
+            <p style="text-align: center; margin-top: 20px;">
+                <a href="/">Back to Public Site</a>
+            </p>
+        </section>
+    </div>
+
+    <script src="/js/admin.js"></script>
+</body>
+</html>

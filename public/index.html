@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul's Cleaning Crews</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Paul's Cleaning Crews</h1>
+    </header>
+
+    <div class="container">
+        <nav>
+            <button id="appointmentsBtn">Appointment Scheduled</button>
+            <button id="contactBtn">Contact</button>
+            <button id="aboutUsBtn">About Us</button>
+            <button id="settingsBtn">Settings</button>
+            <button id="adminLoginBtn">Admin Login</button>
+        </nav>
+
+        <main>
+            <!-- Appointment Scheduled Section -->
+            <section id="appointmentsSection" class="active">
+                <h2>Appointment Scheduled</h2>
+                <div id="appointmentsContent">
+                    <p>Loading appointments...</p>
+                    <!-- Appointments will be loaded here by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contactSection" class="hidden">
+                <h2>Contact Us</h2>
+                <div class="contact-info">
+                    <p><strong>Gmail:</strong> paulworkcc@gmail.com</p>
+                    <p><strong>Phone No:</strong> 022 6906916</p>
+                </div>
+                <h3>Send us a message:</h3>
+                <form id="contactForm">
+                    <label for="contactName">Your Name:</label>
+                    <input type="text" id="contactName" name="name" required>
+
+                    <label for="contactEmail">Your Email:</label>
+                    <input type="email" id="contactEmail" name="email" required>
+
+                    <label for="contactMessage">Message:</label>
+                    <textarea id="contactMessage" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                    <div id="contactMessageStatus" class="message hidden"></div>
+                </form>
+            </section>
+
+            <!-- About Us Section -->
+            <section id="aboutUsSection" class="hidden">
+                <h2>About Us</h2>
+                <div class="about-us-content">
+                    <p>Welcome to Paul’s Cleaning Crews — your trusted partner for a cleaner, fresher space.</p>
+                    <p>We’re a locally owned cleaning company offering reliable, high-quality services tailored to meet the needs of homes and businesses alike. With a strong focus on professionalism and attention to detail, our team is proud to deliver consistent results you can count on.</p>
+                    <p>Our services include:</p>
+                    <ul>
+                        <li><strong>Office Cleaning</strong> – A clean workplace boosts productivity and leaves a lasting impression.</li>
+                        <li><strong>Deep Cleaning</strong> – Perfect for seasonal refreshes or neglected spaces that need extra care.</li>
+                        <li><strong>Residential Cleaning</strong> – From routine cleans to special requests, we make your home shine.</li>
+                        <li><strong>Move In/Move Out Cleaning</strong> – Leave your old or new space spotless and ready for what’s next.</li>
+                    </ul>
+                    <p>At Paul’s Cleaning Crews, we understand that every space is unique. That’s why we offer flexible scheduling, customized cleaning plans, and a commitment to exceeding your expectations—every time.</p>
+                    <p>Clean spaces, happy clients. That’s what we do best.</p>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settingsSection" class="hidden">
+                <h2>Settings</h2>
+                <div class="theme-switcher">
+                    <label>Choose Theme:</label>
+                    <button id="lightThemeBtn">Light Mode</button>
+                    <button id="darkThemeBtn">Dark Mode</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

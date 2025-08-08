@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Paul's Cleaning Crews</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <nav style="margin-bottom: 20px;">
+            <button id="createAppointmentBtn">Create Appointments</button>
+            <button id="addClientBtn">Add Client</button>
+            <button id="showClientsBtn">Show Clients</button>
+            <button id="complaintsReportBtn">Complaints/Reports</button>
+            <button id="adminLogoutBtn">Logout</button>
+        </nav>
+
+        <main class="admin-dashboard">
+            <!-- Create Appointments Section -->
+            <section id="createAppointmentSection" class="active">
+                <h2>Create New Appointment</h2>
+                <form id="createAppointmentForm">
+                    <label for="appointmentTime">Time:</label>
+                    <input type="text" id="appointmentTime" name="time" placeholder="e.g., 10:00 AM, Aug 15" required>
+
+                    <label for="appointmentClientName">Client Name:</label>
+                    <input type="text" id="appointmentClientName" name="clientName" required>
+
+                    <label for="appointmentTypeOfService">Type of Service:</label>
+                    <input type="text" id="appointmentTypeOfService" name="typeOfService" required>
+
+                    <label for="appointmentCleanerAssigned">Cleaner Assigned:</label>
+                    <input type="text" id="appointmentCleanerAssigned" name="cleanerAssigned" required>
+
+                    <button type="submit">Add Appointment</button>
+                    <div id="createAppointmentMessage" class="message hidden"></div>
+                </form>
+                <h3>Current Appointments:</h3>
+                <div id="currentAppointmentsList" class="section-content">
+                    <p>Loading appointments...</p>
+                </div>
+            </section>
+
+            <!-- Add Client Section -->
+            <section id="addClientSection" class="hidden">
+                <h2>Add New Client</h2>
+                <form id="addClientForm">
+                    <label for="clientName">Client Name:</label>
+                    <input type="text" id="clientName" name="name" required>
+
+                    <label for="clientAddress">Address:</label>
+                    <input type="text" id="clientAddress" name="address" required>
+
+                    <label for="clientContactNumber">Contact Number:</label>
+                    <input type="text" id="clientContactNumber" name="contactNumber" required>
+
+                    <button type="submit">Save Client Info</button>
+                    <div id="addClientMessage" class="message hidden"></div>
+                </form>
+            </section>
+
+            <!-- Show Clients Section -->
+            <section id="showClientsSection" class="hidden">
+                <h2>All Clients</h2>
+                <div id="clientsList" class="section-content">
+                    <p>Loading clients...</p>
+                </div>
+            </section>
+
+            <!-- Complaints/Reports Section -->
+            <section id="complaintsReportSection" class="hidden">
+                <h2>Complaints / Reports</h2>
+                <div id="complaintsList" class="section-content">
+                    <p>Loading complaints...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/js/admin.js"></script>
+</body>
+</html>
