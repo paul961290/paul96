@@ -1,0 +1,323 @@
+/* General Styles */
+:root {
+    --light-bg: #f4f7f6;
+    --light-text: #333;
+    --light-primary: #007bff;
+    --light-secondary: #6c757d;
+    --light-accent: #28a745;
+    --light-border: #ddd;
+    --light-card-bg: #fff;
+    --light-shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --light-bg: #2c3e50;
+    --light-text: #ecf0f1;
+    --light-primary: #3498db;
+    --light-secondary: #95a5a6;
+    --light-accent: #2ecc71;
+    --light-border: #4a627a;
+    --light-card-bg: #34495e;
+    --light-shadow: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-bg);
+    color: var(--light-text);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--light-primary);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px var(--light-shadow);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    background-color: var(--light-card-bg);
+    padding: 10px 0;
+    box-shadow: 0 2px 5px var(--light-shadow);
+    border-radius: 8px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav button {
+    background-color: var(--light-primary);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px var(--light-shadow);
+}
+
+nav button:hover {
+    background-color: var(--light-accent);
+    transform: translateY(-2px);
+}
+
+main {
+    padding: 20px 0;
+}
+
+section {
+    background-color: var(--light-card-bg);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--light-shadow);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+section h2 {
+    color: var(--light-primary);
+    margin-top: 0;
+    border-bottom: 2px solid var(--light-border);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+.appointment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.appointment-table th,
+.appointment-table td {
+    border: 1px solid var(--light-border);
+    padding: 12px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.appointment-table th {
+    background-color: var(--light-primary);
+    color: white;
+    font-weight: bold;
+}
+
+.appointment-table tr:nth-child(even) {
+    background-color: var(--light-bg);
+}
+
+.appointment-table tr:hover {
+    background-color: var(--light-border);
+}
+
+/* Contact & About Us Styles */
+.contact-info p,
+.about-us-content p,
+.about-us-content ul {
+    margin-bottom: 15px;
+}
+
+.about-us-content ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+.about-us-content ul li {
+    margin-bottom: 8px;
+}
+
+/* Settings (Theme Toggle) */
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px var(--light-shadow);
+}
+
+.theme-switcher label {
+    font-weight: bold;
+    color: var(--light-text);
+}
+
+.theme-switcher button {
+    background-color: var(--light-secondary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-switcher button:hover {
+    background-color: var(--light-primary);
+    transform: translateY(-1px);
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+    color: var(--light-text);
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+    padding: 12px;
+    border: 1px solid var(--light-border);
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: var(--light-bg);
+    color: var(--light-text);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form textarea:focus {
+    border-color: var(--light-primary);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+form button {
+    background-color: var(--light-accent);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px var(--light-shadow);
+}
+
+form button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Admin Specific Styles */
+.admin-dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .admin-dashboard {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.admin-dashboard .section-content {
+    max-height: 400px; /* Limit height for scrollable content */
+    overflow-y: auto;
+    border: 1px solid var(--light-border);
+    border-radius: 5px;
+    padding: 15px;
+    background-color: var(--light-bg);
+}
+
+.admin-dashboard .section-content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-dashboard .section-content th,
+.admin-dashboard .section-content td {
+    border: 1px solid var(--light-border);
+    padding: 8px;
+    text-align: left;
+}
+
+.admin-dashboard .section-content th {
+    background-color: var(--light-primary);
+    color: white;
+}
+
+.admin-dashboard .section-content td button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-dashboard .section-content td button:hover {
+    background-color: #c82333;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+.message {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
